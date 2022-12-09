@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Marine ships</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat+Subrayada&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+</head>
+<body>	
+    <audio>
+        <source src="audio/oishobtzzaluzhniymutitdvizhmuzatinet.mp3">
+    </audio>
+
+	<div id="video-bg">
+	    <video width="100%" height="auto" preload="auto"  autoplay="true" loop="true" muted="muted" poster="images/backqround.png">
+	        <source src="images/Waves.mp4" type="video/mp4"></source>
+	    </video>
+	</div>
+
+	<div id="app">
+		<div id="game" style="display: none;">
+			<div id="lifes">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			
+		<div class="timer timer-1">
+			<div class="timer__items">
+				<div class="timer__item timer__days">00</div>
+					<div class="timer__item timer__hours">00</div>
+					<div class="timer__item timer__minutes">00</div>
+					<div class="timer__item timer__seconds">00</div>
+			    </div>
+				<div class="timer__result"></div>
+		</div>
+
+			
+
+			<div id="options">
+                <div id="anchor">
+                    <img src="images/yakor.png" >
+                </div>
+				<div id="score">
+					Score: <span>0</span>
+				</div>
+				<div id="sound">
+					<img src="images/mute.png">
+				</div>
+			</div>
+
+			<div id="player" class="skin_1"></div>
+	
+		</div>
+		
+		<audio id = "song">
+			<source src="audio/explosion.mp3">
+		</audio>
+
+		<audio id = "shot">
+			<source src="audio/explosion1.mp3">
+		</audio>
+
+		<audio id = "wow">
+			<source src="audio/015b68da7a89422.mp3">
+		</audio>
+	
+		<audio id = "wow1">
+			<source src="audio/c2f631e2c76831e.mp3">
+		</audio>
+
+		<audio id = "hell-yeah">
+			<source src="audio/hell-yeah.mp3">
+		</audio>
+
+		<div id="start" >
+			<h2>Your ship</h2>
+
+			<div id="select-player" class="clearfix">
+				<span class="selected" id="skin_1">
+					<img src='images/player1.png'>
+				</span>
+			
+				<span id="skin_2">
+					<img src='images/player2.png'>
+				</span>
+			</div>
+			<button>Start</button>
+		</div>
+
+		<div id="end" style="display: none;">
+			<h2>You lose</h2>
+
+			<h3>Number of sunken ships: <span></span></h3>
+			<img src='images/Moskva-gorit_Odesskij-kurer (1) (1).jpg' class="seaship">
+			<button onclick="timer();">Restart</button>
+		</div>
+
+	</div>
+	<script src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+/* Видео для заднего фона */
+body {
+  font-family: 'Montserrat', 'Anton', serif;
+}
+#video-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+  background: url('../images/backqround.png') no-repeat #384657;
+  background-size: cover;
+}
+
+#video-bg > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto;
+  height: auto; 
+}
+
+@supports (object-fit: cover) {
+  #video-bg > video {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+}
+/* ===
+Игра 
+=== */
+#app {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 9;
+}
+/* Жизни */
+#lifes {
+  /*position: absolute;*/
+  top: 5px;
+  left: 20px;
+}
+
+#lifes span {
+  display: block;
+  margin: 10px;
+  float: right;
+  width: 40px;
+  height: 40px;
+  background: url('../images/lifes.png');
+  background-size: cover;
+}
+/* Кнопки опций игры */
+#options {
+  float: left;
+  height: 40px;
+  margin: 10px;
+}
+#options div {
+  float: left;
+  cursor: pointer;
+}
+#options #score {
+  color: #fff;
+  font-size: 24px;
+  margin: 6px 40px;
+}
+#anchor img {
+  width: 40px;
+  height: 52px;
+}
+
+#options #sound,
+#options #sound img {
+  height: 100%;
+}
+
+/* Игрок */
+#player {
+  height: 200px;
+  position: absolute;
+  top: calc(83% - 100px);
+  right: calc(60% - 30px);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+#player.skin_1 {
+  width: 40px;
+  background: url('../images/player1.png') no-repeat;
+}
+
+#player.skin_2 {
+  width: 177px;
+  background: url('../images/player2.png') no-repeat;
+}
+/* Пуля */
+.rocket {
+  display: block;
+      position: fixed;
+ 
+  top: 55%;
+  left: 38.5%;
+  background: url('../images/bom.png') no-repeat;
+  display: block;
+  width: 100px;
+  height: 150px;
+
+ 
+}
+/* Взрыв */
+.explosion {
+  background: url('../images/bowaves.gif');
+  position: absolute;
+  width: 200px;
+  height: 200px;
+ 
+  top: 40%;
+  left: 70%;
+}
+/* Враги */
+.enemy {
+  position: absolute;
+  top: calc(70% - 85px);
+  right: 20px;
+
+}
+/* Враг тип 1 */
+.enemy.type-1 {
+  top: calc(10% - 85px);
+  left: 35%;
+  width: 117px;
+  height: 165px;
+  background: url('../images/enemy1.png') no-repeat;
+}
+/* Враг тип 2 */
+.enemy.type-2 {
+  top: calc(10% - 85px);
+  left: 45%;
+  width: 174px;
+  height: 200px;
+  background: url('../images/enemy2.png') no-repeat;
+}
+
+/*===
+Стартовое окно
+===*/
+#start, #end {
+  background: #838383;
+  position: relative;
+  width: 600px;
+  height: 520px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 2px 20px;
+  margin: 80px auto;
+  font-family: arial black;
+  font-size: 24px;
+}
+
+#start #select-player {
+  width: 475px;
+  margin: 0 auto;
+}
+#start #select-player span {
+  border-radius: 10px;
+  display: block;
+  float: left;
+  padding: 30px;
+  cursor: pointer;
+  margin: 0 65px;
+}
+
+#start #select-player span.selected {
+  border: 2px solid #326184;
+}
+#start button, #end button {
+  padding: 20px 40px;
+  font-size: 18px;
+  letter-spacing: 22 px;
+  font-family: 'Anton';
+  background-color: #80C8BC;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+  outline: none;
+  color: black;
+  text-transform: uppercase;
+}
+#start button:hover, #end button:hover{
+  background-color: black;
+  color: white;
+}
+/*===
+Вспомогательные классы
+===*/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.choice {
+  display: flex;
+  display: block;
+}
+
+#start h2 {
+  font-family: 'Montserrat';
+}
+
+
+
+.size-container {
+  transform: none !important;
+}
+
+.aut-iframe {
+  display: none !important;
+}
+
+.spec-iframe {
+  visibility: initial !important;
+  position: initial !important;
+  width: 100% !important;
+  height: 100% !important;
+}
